@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use warnings;
+use strict;
+
 #################################################################
 # 使い方
 #   psed EXPRESSION [FILE...]
