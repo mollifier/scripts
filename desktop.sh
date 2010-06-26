@@ -2,9 +2,9 @@
 
 # startup script for desktop.
 
-prism-gmail.sh &
+run-prism.sh gmail &
 
-prism-livedoorreader.sh &
+run-prism.sh livedoorreader &
 
 /usr/bin/firefox -P "default" &
 
