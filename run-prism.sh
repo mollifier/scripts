@@ -66,7 +66,7 @@ shift $(expr $OPTIND - 1)
 
 webapp_name="$1"
 
-if [ -z "${FIREFOX_DEFAULT_PROFILE_DIR_PATH}" ]; then
+if [ ! -d "${FIREFOX_DEFAULT_PROFILE_DIR_PATH}" ]; then
     print_error "firefox profile was not found : ${FIREFOX_DEFAULT_PROFILE_DIR_PATH}"
     exit 1
 fi
