@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby1.9.1
 
 AVAST_REPORT_FILE = ENV['HOME'] + "/.avast/report.txt"
 

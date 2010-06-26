@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby1.9.1
 
 ARGF.each_line(rs = nil) do |buf|
   puts buf.sub(/^javascript:/, "").
