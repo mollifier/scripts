@@ -18,11 +18,6 @@ declare -r REPORT_FILE_NAME=${AVAST_DIR}/report.txt
 #1: 削除する, 2: 未使用, 3: 復元する, 4: ユーザ入力を待つ
 declare -r CONTINUE_TYPE=1
 
-#展開してスキャン対象とするアーカイブファイルの種類
-#A: すべて
-declare -r ARCHIVE_TYPE='A'
-
-
 #####################
 #関数
 #####################
@@ -89,11 +84,13 @@ fi
 #nostats: スキャン結果の統計情報を出力しない
 #continue: 感染したファイルが存在した場合の動作の指定
 #report: 結果を記述したレポートファイルを出力する
+#
+# archivetype オプションは指定せずデフォルトのままとする
+# iso ファイル中の VOB ファイルで decompression bomb error が発生することがあるため
 
 ${AVAST_CMD} --testall --nostats \
 	--continue=${CONTINUE_TYPE} \
 	--report=${REPORT_FILE_NAME} \
-	--archivetype=${ARCHIVE_TYPE} \
 	"${@:-${DEFAULT_SCAN_TARGET}}" \
 	| grep -E -v -e '[[:space:]]+\[OK\]$'
 
