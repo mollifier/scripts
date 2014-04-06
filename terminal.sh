@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gnome-terminal --geometry 100x37+210+120 -x screen zsh --login
+gnome-terminal --geometry 110x47+210+98 -x screen zsh --login
 
